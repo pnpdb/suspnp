@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+druid:
+  security:
+    username: monitor
+    password: password
+  url: jdbc:mysql://127.0.0.1:3306/suspnp_db?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&cachePrepStmts=true&useServerPrepStmts=true&prepStmtCacheSize=250&prepStmtCacheSqlLimit=2048&useSSL=false
+  username: root
+  password: ABOCN18618331097
+  driver-class-name: com.mysql.jdbc.Driver
+  initialSize: 10
+  minIdle: 5
+  maxActive: 30
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: select '1+1'
+  testWhileIdle: true
+
+logging:
+  level:
+    com.evtape: DEBUG
+  config: classpath:logger-prod.xml
