@@ -13,7 +13,7 @@ spring:
 jmx:
   rmi:
     host: localhost
-    port: 8088
+    port: 54000
 
 druid:
   security:

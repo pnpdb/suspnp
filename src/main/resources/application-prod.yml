@@ -1,5 +1,5 @@
 server:
-  port: 5000
+  port: 54000
 
 spring:
   jpa:
@@ -13,7 +13,7 @@ spring:
 jmx:
   rmi:
     host: 127.0.0.1
-    port: 8088
+    port: 55000
 
 druid:
   security:
